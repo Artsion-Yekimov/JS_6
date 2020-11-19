@@ -34,7 +34,7 @@ document.write (Math.sqrt (root))
 // NUMBER 5
 document.write ('<br>' + '------------- NUMBER 5 -------------' + '<br>')
 function number_5 (a, b) {
-    c = a - b;
+    let c = a - b;
     if (c < 0) {
         c = Math.abs(c)
     }
@@ -59,7 +59,7 @@ let minute = date.getMinutes();
 if (minute < 10) {minute = '0' + minute};
 let second = date.getSeconds();
 if (second < 10) {second = '0' + second};
-document.write ( hour + ':' + minute + ':' + second + ' ' + day + '.' + month + '.' + year + '.')
+document.write ( hour + ':' + minute + ':' + second + ' ' + day + '.' + (month+1)  + '.' + year + '.')
 }
 number_6 (dateNow)
 //--------------------------------------------
@@ -71,7 +71,7 @@ document.write (a_7.match(/ab+a/g))
 // NUMBER 8
 document.write ('<br>' + '------------- NUMBER 8 -------------' + '<br>')
 let a_8 = '+375-29-8787991'; 
-let RegExp = /\+375-[0-9]{2}-[0-9]{7}$/g;
+let RegExp = /\+375-?[0-9]{2}-?[0-9]{7}$/g;
 document.write(RegExp.test(a_8));
 //--------------------------------------------
 // NUMBER 9
